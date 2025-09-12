@@ -6,4 +6,4 @@ This project provides both **basic arithmetic operations** and **scientific func
 ---
 
 ## 🎥 Demo Video
-👉 [Watch the demo](./demo.mp4) 
+👉 [Watch the demo](./Recording 2025-09-12 162630 (1) (1).mp4) 
