@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Scientific Calculator Pro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calc-header">
+            <h1 class="calc-title">SCIENTIFIC CALC PRO</h1>
+            <p class="calc-subtitle">Advanced Mathematical Computing System</p>
+        </div>
+
+        <div class="mode-selector">
+            <button class="mode-btn active" data-mode="standard">Standard</button>
+            <button class="mode-btn" data-mode="scientific">Scientific</button>
+            <button class="mode-btn" data-mode="programmer">Programmer</button>
+        </div>
+
+        <div class="display-section">
+            <div class="secondary-display" id="secondaryDisplay"></div>
+            <div class="main-display" id="mainDisplay">0</div>
+        </div>
+
+        <div class="button-grid" id="buttonGrid">
+            <!-- Standard Mode Buttons -->
+            <button class="calc-btn function" data-action="clear">C</button>
+            <button class="calc-btn function" data-action="clearEntry">CE</button>
+            <button class="calc-btn function" data-action="backspace">⌫</button>
+            <button class="calc-btn function" data-action="percentage">%</button>
+            <button class="calc-btn operator" data-action="divide">÷</button>
+            
+            <button class="calc-btn function" data-action="sin">sin</button>
+            <button class="calc-btn function" data-action="cos">cos</button>
+            <button class="calc-btn function" data-action="tan">tan</button>
+            <button class="calc-btn function" data-action="log">log</button>
+            <button class="calc-btn operator" data-action="multiply">×</button>
+            
+            <button class="calc-btn" data-value="7">7</button>
+            <button class="calc-btn" data-value="8">8</button>
+            <button class="calc-btn" data-value="9">9</button>
+            <button class="calc-btn function" data-action="power">x^y</button>
+            <button class="calc-btn operator" data-action="subtract">−</button>
+            
+            <button class="calc-btn" data-value="4">4</button>
+            <button class="calc-btn" data-value="5">5</button>
+            <button class="calc-btn" data-value="6">6</button>
+            <button class="calc-btn function" data-action="sqrt">√x</button>
+            <button class="calc-btn operator" data-action="add">+</button>
+            
+            <button class="calc-btn" data-value="1">1</button>
+            <button class="calc-btn" data-value="2">2</button>
+            <button class="calc-btn" data-value="3">3</button>
+            <button class="calc-btn function" data-action="factorial">x!</button>
+            <button class="calc-btn function" data-action="openParen">(</button>
+            
+            <button class="calc-btn" data-value="0">0</button>
+            <button class="calc-btn" data-value=".">.</button>
+            <button class="calc-btn function" data-action="negate">±</button>
+            <button class="calc-btn function" data-action="closeParen">)</button>
+            <button class="calc-btn equals" data-action="equals">=</button>
+        </div>
+
+        <div class="advanced-panel">
+            <div class="panel-header">
+                <span class="panel-title">ADVANCED FUNCTIONS</span>
+                <button class="toggle-btn" id="advancedToggle">▲</button>
+            </div>
+            
+            <div class="memory-display" id="memoryDisplay">Memory: 0</div>
+            
+            <div class="button-grid" style="grid-template-columns: repeat(6, 1fr);">
+                <button class="calc-btn function" data-action="memoryStore">MS</button>
+                <button class="calc-btn function" data-action="memoryRecall">MR</button>
+                <button class="calc-btn function" data-action="memoryAdd">M+</button>
+                <button class="calc-btn function" data-action="memorySubtract">M-</button>
+                <button class="calc-btn function" data-action="memoryClear">MC</button>
+                <button class="calc-btn function" data-action="toggleAngle">DEG</button>
+                
+                <button class="calc-btn function" data-action="ln">ln</button>
+                <button class="calc-btn function" data-action="exp">e^x</button>
+                <button class="calc-btn function" data-action="pi">π</button>
+                <button class="calc-btn function" data-action="e">e</button>
+                <button class="calc-btn function" data-action="reciprocal">1/x</button>
+                <button class="calc-btn function" data-action="abs">|x|</button>
+            </div>
+            
+            <div class="history-panel" id="historyPanel">
+                <div class="panel-title" style="font-size: 0.9rem; margin-bottom: 10px;">Calculation History</div>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <span id="statusText">Ready</span>
+            <span class="angle-mode" id="angleMode">DEG</span>
+            <span id="precisionDisplay">Precision: 10</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</html>
