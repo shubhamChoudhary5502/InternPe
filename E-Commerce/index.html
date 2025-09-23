@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MiniShop — Single File E‑Commerce</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="logo"><div class="mark">MS</div><h1>MiniShop</h1></div>
+      <div class="nav">
+        <div class="search" role="search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <input id="searchInput" placeholder="Search products..." />
+        </div>
+        <button class="cart-btn" id="openCartBtn" aria-label="Open cart">
+          🛒 Cart <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="controls">
+        <div class="filters">
+          <select id="categoryFilter">
+            <option value="all">All Categories</option>
+          </select>
+          <select id="priceFilter">
+            <option value="all">Any Price</option>
+            <option value="0-50">Under $50</option>
+            <option value="50-150">$50 - $150</option>
+            <option value="150-99999">$150+</option>
+          </select>
+          <button class="btn ghost" id="resetFilters">Reset</button>
+        </div>
+        <div style="margin-left:auto;color:var(--muted);font-size:13px">Showing <span id="resultCount">0</span> products</div>
+      </section>
+
+      <section class="grid" id="productGrid" aria-live="polite"></section>
+    </main>
+
+    <footer>
+      <div>
+        <strong>MiniShop</strong> — Small demo store • Built with vanilla JavaScript
+      </div>
+      <div class="muted">© MiniShop 2025 • Demo data only</div>
+    </footer>
+  </div>
+
+  <!-- Modal / Overlay (used for product details and cart/checkout) -->
+  <div class="overlay" id="overlay">
+    <div class="panel" id="panel"></div>
+  </div>
+
+  <template id="productCardTpl">
+    <article class="card fade-in">
+      <div class="thumb" data-img></div>
+      <div>
+        <div class="title" data-title></div>
+        <div class="muted" data-desc></div>
+      </div>
+      <div class="card-controls">
+        <div>
+          <div class="price" data-price></div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <button class="btn" data-add>Add</button>
+          <button class="btn ghost" data-details>Details</button>
+        </div>
+      </div>
+    </article>
+  </template>
+
+    <script src="script.js"></script>
+</body>
+</html>
