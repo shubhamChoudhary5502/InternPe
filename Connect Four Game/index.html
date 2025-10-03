@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Four</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🔴 Connect Four 🟡</h1>
+        
+        <div class="score-board">
+            <div class="score player-red">
+                <div class="score-label">Red Player</div>
+                <div class="score-value" id="red-score">0</div>
+            </div>
+            <div class="score player-yellow">
+                <div class="score-label">Yellow Player</div>
+                <div class="score-value" id="yellow-score">0</div>
+            </div>
+        </div>
+
+        <div class="status red-turn" id="status">Red Player's Turn</div>
+
+        <div class="board" id="board"></div>
+
+        <div class="controls">
+            <button onclick="resetGame()">New Game</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
